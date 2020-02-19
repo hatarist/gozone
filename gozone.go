@@ -602,7 +602,7 @@ func (s *Scanner) nextToken() (string, error) {
 }
 
 func parseClass(token string) (RecordClass, error) {
-	switch token {
+	switch strings.ToUpper(token) {
 	case "IN":
 		return RecordClass_IN, nil
 	case "CS":
@@ -619,7 +619,7 @@ func parseClass(token string) (RecordClass, error) {
 }
 
 func parseType(token string) (RecordType, error) {
-	switch token {
+	switch strings.ToUpper(token) {
 	case "A":
 		return RecordType_A, nil
 	case "NS":
